@@ -20,7 +20,7 @@ public:
     double AbsLookingDegreesYZ = 0;
     double AbsLookingDegreesXZ = 0;
     double rotatedeg = 0;
-    camera(int);
+    camera();
     ~camera();
     void getinput(bool*);
     void GetMouseChanges();

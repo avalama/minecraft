@@ -44,6 +44,8 @@ public:
     //radius may change
     circle CubeCircle{ &center };
     cube(position,float,int);
+    cube();
     ~cube();
     void Move();
+    void debug();
 };

@@ -131,6 +131,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="chunk.h" />
+    <ClInclude Include="UIntArr.h" />
     <ClInclude Include="OutOfClassFunctions.h" />
     <ClInclude Include="IncludesAndLibraries.h" />
     <ClInclude Include="BasicMath.h" />
@@ -142,6 +144,7 @@
     <ClInclude Include="FloatArray.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="chunk.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="cube.cpp" />
     <ClCompile Include="circle.cpp" />
@@ -149,6 +152,7 @@
     <ClCompile Include="FloatArray.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="BasicMath.cpp" />
+    <ClCompile Include="UIntArr.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="FragmentShader.shader" />

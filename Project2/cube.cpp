@@ -1,22 +1,45 @@
 #include"Cube.h"
-cube::cube(position p,float s,int id):center(center),id(id)
+cube::cube(position p, float s, int id) :center(center), id(id)
 {
+    position color;
+    int d = rand();
+    if (d % 3 == 0)
+    {
+         color={ 255,0,0 };
+        cout << color.x;
+    };
+    if (d % 3 == 1)
+    {
+         color={ 0,255,0 };
+        cout << color.x;
+    }
+    if (d % 3 == 2)
+    {
+         color={ 0,0,255 };
+        cout << color.x;
+    }
     float copy[48] = 
     {
-        -s+p.x,s+p.y,s+p.z, 255,0,0,    //left up +front     0  
-        s+p.x,s+p.y,s+p.z,255,0,0,     //right up front    1
-        s+p.x,-s+p.y,s+p.z,0,0,255,    //right down front  2
-        -s+p.x,-s+p.y,s+p.z,255,0,0,   //left dowm front   3
-        -s+p.x,-s+p.y,-s+p.z,0,0,255,  //left down back    4
-        -s+p.x,s+p.y,-s+p.z, 0,0,255,  //left up back      5
-        s+p.x,s+p.y,-s+p.z,0,255,0,   //right up back     6
-        s+p.x,-s+p.y,-s+p.z,0,255,0  //right down back   7
+        -s+p.x,s+p.y,s+p.z, color.x,color.y,color.z,    //left up +front     0  
+        s+p.x,s+p.y,s+p.z,color.x,color.y,color.z,     //right up front    1
+        s+p.x,-s+p.y,s+p.z,color.x,color.y,color.z,    //right down front  2
+        -s+p.x,-s+p.y,s+p.z,color.x,color.y,color.z,   //left dowm front   3
+        -s+p.x,-s+p.y,-s+p.z,color.x,color.y,color.z,  //left down back    4
+        -s+p.x,s+p.y,-s+p.z, color.x,color.y,color.z,  //left up back      5
+        s+p.x,s+p.y,-s+p.z,color.x,color.y,color.z,   //right up back     6
+        s+p.x,-s+p.y,-s+p.z,color.x,color.y,color.z  //right down back   7
     };
+    center = p;
+
     for (int i = 0; i < CubeShapeLength; i++)
     {
         CubeShape[i] = copy[i];
     }
     CubeShapeArray.id = 9;
+}
+cube::cube()
+{
+
 }
 cube::~cube()
 {
@@ -30,19 +53,20 @@ void cube::Move()
         if (reset)
         {
             float CubeShape1[48] = {
-        -0.2f,0.2f,0.2f, 255,0,0,    //left up front     0  
-        0.2f,0.2f,0.2f,255,0,0,     //right up front    1
-        0.2f,-0.2f,0.2f,0,0,255,    //right down front  2
-        -0.2f,-0.2f,0.2f,255,0,0,   //left dowm front   3
-        -0.2f,-0.2f,-0.2f,0,0,255,  //left down back    4
-        -0.2f,0.2f,-0.2f, 0,0,255,  //left up back      5
-        0.2f,0.2f,-0.2f,0,255,0,   //right up back     6
-        0.2f,-0.2f,-0.2f,0,255,0  //right down back   7
+        -0.2f,0.2f,0.2f, CubeShape[3],CubeShape[4],CubeShape[5],    //left up front     0  
+        0.2f,0.2f,0.2f,CubeShape[3],CubeShape[4],CubeShape[5],     //right up front    1
+        0.2f,-0.2f,0.2f,CubeShape[3],CubeShape[4],CubeShape[5],    //right down front  2
+        -0.2f,-0.2f,0.2f,CubeShape[3],CubeShape[4],CubeShape[5],   //left dowm front   3
+        -0.2f,-0.2f,-0.2f,CubeShape[3],CubeShape[4],CubeShape[5],  //left down back    4
+        -0.2f,0.2f,-0.2f, CubeShape[3],CubeShape[4],CubeShape[5],  //left up back      5
+        0.2f,0.2f,-0.2f,CubeShape[3],CubeShape[4],CubeShape[5],   //right up back     6
+        0.2f,-0.2f,-0.2f,CubeShape[3],CubeShape[4],CubeShape[5]  //right down back   7
             };
             for (int i = 0; i < CubeShapeLength; i++)
             {
                 CubeShape[i] = CubeShape1[i];
             }
+            center = { 0,0,0 };
         }
         if(mright)
         {
@@ -94,5 +118,14 @@ void cube::Move()
         center.z += speed;
     }
 };
+void cube::debug()
+{
+    system("cls");
+    cout << "cube " << id<<endl<<endl;
+    for (int i = 0; i < CubeShapeLength; i += VertexLength)
+    {
+        cout << CubeShape[i] << "  ,  " << CubeShape[i + 1] << "  ,  " << CubeShape[i + 2] << "  ,  " << CubeShape[i + 3] << "  ,  " << CubeShape[i + 4] << "  ,  " << CubeShape[i + 5] << endl;
+    }
+}
    // function for roots
    // double r = sqrt(9);

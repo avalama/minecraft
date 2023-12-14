@@ -2,9 +2,8 @@
 #include"Camera.h"
 #include"BasicMath.h"
 #include"OutOfClassFunctions.h"
-camera::camera(int size)
+camera::camera()
 {
-    ArrayToBuffer.create(size);
     GetCursorPos(&LongCurs);
     lastCursorPos.x = LongCurs.x;
     lastCursorPos.y = LongCurs.y;
@@ -169,8 +168,8 @@ floatarray camera::RotateCube(cube* cube)
         {
             rotpos = rotateAroundCameraXZ(cube->CubeCircle, rotpos);
         }
-        rotpos.x += 2*xscreen;
-        rotpos.y -= 2*yscreen;
+        rotpos.x += 2 * xscreen;
+        rotpos.y -= 2 * yscreen;
         rotpos = ScaleByDistance(cube, rotpos);
         rotpos = MakeDepth(rotpos);
         ArrayToBuffer.arraystart[i] = rotpos.x;
@@ -276,15 +275,15 @@ position camera::ScaleByDistance(cube* cube1,position pastpos)
     double distance = 1 - (abs(CameraPosition.z - pastpos.z) / 2);
     a.x = cube1->center.x + ((pastpos.x - cube1->center.x) * distance);
     a.y = cube1->center.y + ((pastpos.y - cube1->center.y) * distance);
-    a.z = pastpos.z;
+    a.z = cube1->center.z + ((pastpos.z - cube1->center.z) * distance);
     return a;
 }
 position camera::MakeDepth( position pastpos)
 {
     position a;
-    double distance = 1 - (abs(CameraPosition.z - pastpos.z) / 2);
-    a.x = pastpos.x * distance;
-    a.y = pastpos.y * distance;
+    double distance = 0.8 - (abs(CameraPosition.z - pastpos.z) / (2/0.8));
+    a.x = pastpos.x * (distance+0.2);
+    a.y = pastpos.y * (distance+0.2);
     a.z = pastpos.z ;
-    return a;
+     return a;
 }

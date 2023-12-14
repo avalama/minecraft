@@ -76,3 +76,16 @@ void GLAPIENTRY MessageCallBack(GLenum source, GLenum type, GLuint id, GLenum se
 {
     cout << "OpenGL Error:"<<message<<endl;
 }
+unsigned int* add(unsigned int a[], int size1, unsigned int b[], int size2)
+{
+    unsigned int* arr = new unsigned int[size1 + size2];
+    for (int i = 0; i < size1; i++)
+    {
+        arr[i] = a[i];
+    }
+    for (int i = 0; i < size2; i++)
+    {
+        arr[i + size1] = b[i] + 8 * (int(i / 36) + int(size1 / 36));
+    }
+    return arr;
+}
