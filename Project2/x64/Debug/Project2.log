@@ -1,13 +1,5 @@
 ﻿  chunk.cpp
-C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\chunk.cpp(9,19): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\chunk.cpp(9,19): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\chunk.cpp(9,40): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\chunk.cpp(9,33): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\chunk.cpp(9,33): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  main.cpp
-C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\main.cpp(32,74): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\main.cpp(35,64): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\main.cpp(35,94): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\main.cpp(109,40): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
-  Generating Code...
+glew32s.lib(glew.obj) : warning LNK4099: PDB '' was not found with 'glew32s.lib(glew.obj)' or at ''; linking object as if no debug info
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
   Project2.vcxproj -> C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\x64\Debug\Project2.exe

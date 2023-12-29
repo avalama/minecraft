@@ -1,22 +1,19 @@
 #include"Cube.h"
 cube::cube(position p, float s, int id) :center(center), id(id)
 {
-    position color;
+    size = s;
     int d = rand();
     if (d % 3 == 0)
     {
          color={ 255,0,0 };
-        cout << color.x;
     };
     if (d % 3 == 1)
     {
          color={ 0,255,0 };
-        cout << color.x;
     }
     if (d % 3 == 2)
     {
          color={ 0,0,255 };
-        cout << color.x;
     }
     float copy[48] = 
     {
@@ -53,14 +50,14 @@ void cube::Move()
         if (reset)
         {
             float CubeShape1[48] = {
-        -0.2f,0.2f,0.2f, CubeShape[3],CubeShape[4],CubeShape[5],    //left up front     0  
-        0.2f,0.2f,0.2f,CubeShape[3],CubeShape[4],CubeShape[5],     //right up front    1
-        0.2f,-0.2f,0.2f,CubeShape[3],CubeShape[4],CubeShape[5],    //right down front  2
-        -0.2f,-0.2f,0.2f,CubeShape[3],CubeShape[4],CubeShape[5],   //left dowm front   3
-        -0.2f,-0.2f,-0.2f,CubeShape[3],CubeShape[4],CubeShape[5],  //left down back    4
-        -0.2f,0.2f,-0.2f, CubeShape[3],CubeShape[4],CubeShape[5],  //left up back      5
-        0.2f,0.2f,-0.2f,CubeShape[3],CubeShape[4],CubeShape[5],   //right up back     6
-        0.2f,-0.2f,-0.2f,CubeShape[3],CubeShape[4],CubeShape[5]  //right down back   7
+        -size,size,size, CubeShape[3],CubeShape[4],CubeShape[5],    //left up front     0  
+        size,size,size,CubeShape[3],CubeShape[4],CubeShape[5],     //right up front    1
+        size,-size,size,CubeShape[3],CubeShape[4],CubeShape[5],    //right down front  2
+        -size,-size,size,CubeShape[3],CubeShape[4],CubeShape[5],   //left dowm front   3
+        -size,-size,-size,CubeShape[3],CubeShape[4],CubeShape[5],  //left down back    4
+        -size,size,-size, CubeShape[3],CubeShape[4],CubeShape[5],  //left up back      5
+        size,size,-size,CubeShape[3],CubeShape[4],CubeShape[5],   //right up back     6
+        size,-size,-size,CubeShape[3],CubeShape[4],CubeShape[5]  //right down back   7
             };
             for (int i = 0; i < CubeShapeLength; i++)
             {
@@ -68,7 +65,7 @@ void cube::Move()
             }
             center = { 0,0,0 };
         }
-        if(mright)
+        if (mright)
         {
             CubeShape[i] += speed;
         }
@@ -78,11 +75,11 @@ void cube::Move()
         }
         if (mdown)
         {
-            CubeShape[i+1] -= speed;
+            CubeShape[i + 1] -= speed;
         }
         if (mup)
         {
-            CubeShape[i+1] += speed;
+            CubeShape[i + 1] += speed;
         }
         if (mbackward)
         {
@@ -92,7 +89,7 @@ void cube::Move()
         {
             CubeShape[i + 2] += speed;
         }
-	};
+    };
     if (mright)
     {
         center.x += speed;
@@ -114,6 +111,78 @@ void cube::Move()
         center.z -= speed;
     }
     if (mfoward)
+    {
+        center.z += speed;
+    }
+};
+void cube::Move( bool greset,bool gup,bool gdown,bool gleft, bool gright, bool gfoward,bool gbackward)
+{
+    for (int i = 0; i < CubeShapeLength; i += VertexLength)
+    {
+        if (greset)
+        {
+            float CubeShape1[48] = {
+        -size,size,size, CubeShape[3],CubeShape[4],CubeShape[5],    //left up front     0  
+        size,size,size,CubeShape[3],CubeShape[4],CubeShape[5],     //right up front    1
+        size,-size,size,CubeShape[3],CubeShape[4],CubeShape[5],    //right down front  2
+        -size,-size,size,CubeShape[3],CubeShape[4],CubeShape[5],   //left dowm front   3
+        -size,-size,-size,CubeShape[3],CubeShape[4],CubeShape[5],  //left down back    4
+        -size,size,-size, CubeShape[3],CubeShape[4],CubeShape[5],  //left up back      5
+        size,size,-size,CubeShape[3],CubeShape[4],CubeShape[5],   //right up back     6
+        size,-size,-size,CubeShape[3],CubeShape[4],CubeShape[5]  //right down back   7
+            };
+            for (int i = 0; i < CubeShapeLength; i++)
+            {
+                CubeShape[i] = CubeShape1[i];
+            }
+            center = { 0,0,0 };
+        }
+        if(gright)
+        {
+            CubeShape[i] += speed;
+        }
+        if (gleft)
+        {
+            CubeShape[i] -= speed;
+        }
+        if (gdown)
+        {
+            CubeShape[i+1] -= speed;
+        }
+        if (gup)
+        {
+            CubeShape[i+1] += speed;
+        }
+        if (gbackward)
+        {
+            CubeShape[i + 2] -= speed;
+        }
+        if (gfoward)
+        {
+            CubeShape[i + 2] += speed;
+        }
+	};
+    if (gright)
+    {
+        center.x += speed;
+    }
+    if (gleft)
+    {
+        center.x -= speed;
+    }
+    if (gdown)
+    {
+        center.y -= speed;
+    }
+    if (gup)
+    {
+        center.y += speed;
+    }
+    if (gbackward)
+    {
+        center.z -= speed;
+    }
+    if (gfoward)
     {
         center.z += speed;
     }

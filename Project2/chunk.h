@@ -7,7 +7,9 @@ public:
 	cube* ArrayToBuffer[256];
 	floatarray result;
 	unsigned int * CubeElement;
-	chunk(int);
+	int elementsize=0;
+	chunk(int,camera);
+	void Move();
 	void SortArrForBuffer();
 	floatarray renderbuffer(camera);
 };

@@ -5,11 +5,13 @@
 class cube
 {
 public:
+    position center;
+    position color;
     float speed = 0.01f;
+    float size = 0.0f;
     float CubeShape[48];
     int id = 0;
     float* up = CubeShape + 1, * down = CubeShape + 13, * left = CubeShape, * right = CubeShape + 6, * foward = CubeShape + 2, * backward = CubeShape + 26;
-    position center;
     int CubeShapeLength = sizeof(CubeShape) / sizeof(float);
     floatarray CubeShapeArray{ CubeShape,CubeShapeLength,true };
     int VertexLength = CubeShapeLength / 8;
@@ -43,9 +45,11 @@ public:
     int ElementLength = 36;
     //radius may change
     circle CubeCircle{ &center };
+    float newZ;
     cube(position,float,int);
     cube();
     ~cube();
     void Move();
+    void Move(bool, bool, bool, bool, bool, bool, bool );
     void debug();
 };
