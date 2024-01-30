@@ -1,0 +1,8 @@
+﻿  main.cpp
+C:\Users\USER\source\repos\avalama\minecraft\Project2\main.cpp(19,74): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\USER\source\repos\avalama\minecraft\Project2\main.cpp(88,38): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+C:\Users\USER\source\repos\avalama\minecraft\Project2\main.cpp(88,30): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+C:\Users\USER\source\repos\avalama\minecraft\Project2\main.cpp(88,22): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+  Project2.vcxproj -> C:\Users\USER\source\repos\avalama\minecraft\x64\Debug\Project2.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.

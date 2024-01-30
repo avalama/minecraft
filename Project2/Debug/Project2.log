@@ -1,0 +1,11 @@
+﻿  FloatArray.cpp
+  OutOfClassFunctions.cpp
+  camera.cpp
+  circle.cpp
+  cube.cpp
+  main.cpp
+C:\Users\zilch\OneDrive\Desktop\Project2\Project2\main.cpp(98,40): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+C:\Users\zilch\OneDrive\Desktop\Project2\Project2\main.cpp(72,18): warning C4101: 'buff1': unreferenced local variable
+C:\Users\zilch\OneDrive\Desktop\Project2\Project2\main.cpp(108,1): error C2129: static function 'unsigned int createprog(const std::string &,const std::string &)' declared but not defined
+C:\Users\zilch\OneDrive\Desktop\Project2\Project2\Header.h(129,21): message : see declaration of 'createprog'
+  Generating Code...

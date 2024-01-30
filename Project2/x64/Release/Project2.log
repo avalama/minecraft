@@ -1,0 +1,33 @@
+﻿  chunk.cpp
+C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\chunk.cpp(11,30): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\chunk.cpp(11,30): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\chunk.cpp(11,59): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\chunk.cpp(11,48): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\chunk.cpp(11,48): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  main.cpp
+C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\main.cpp(19,74): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\main.cpp(22,64): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\main.cpp(22,94): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\main.cpp(94,40): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+  cube.cpp
+  circle.cpp
+  OutOfClassFunctions.cpp
+  FloatArray.cpp
+  Camera.cpp
+C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\Camera.cpp(171,23): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\Camera.cpp(172,23): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\Camera.cpp(276,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\Camera.cpp(277,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\Camera.cpp(278,27): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\Camera.cpp(285,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\Project2\Camera.cpp(286,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  BasicMath.cpp
+  UIntArr.cpp
+LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
+  Generating code
+  323 of 323 functions (100.0%) were compiled.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+glew32s.lib(glew.obj) : warning LNK4099: PDB '' was not found with 'glew32s.lib(glew.obj)' or at ''; linking object as if no debug info
+  Project2.vcxproj -> C:\Users\Delta Apollo\Documents\מסמכים של הצוות\דרור\minecraft-master\x64\Release\Project2.exe
