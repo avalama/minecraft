@@ -9,7 +9,7 @@ chunk::chunk(camera cam,int x,int z)
         for (int j = 0; j < 16; j++)
         {
             position a = { i-8+(x*16),-3.5,j-8+(z*16)};
-            CubeArr[i][j] = cube(a, 0.5, 6);
+            CubeArr[i][j] = cube(a, 0.5, rand()%10);
             ArrayToBuffer[place] = &CubeArr[i][j];
             place++;
             CubeElement = add(CubeElement,elementsize, CubeArr[i][j].element, CubeArr[i][j].ElementLength);
@@ -46,10 +46,13 @@ floatarray chunk::renderbuffer(camera cam)
     floatarray  save1;
     for (int i = 0;i<256; i++)
     {
+       if(ArrayToBuffer[i].id!=0)
+       {
         save1=result.add(cam.RotateCube(ArrayToBuffer[i]));
         free(result.arraystart);
         result.arraystart = nullptr;
         result = save1;
+       }
     }
     SortArrForBuffer();
     return result;
