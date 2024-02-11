@@ -3,8 +3,8 @@
 class chunk
 {
 public:
-	cube CubeArr[16][16][256];
-	cube* ArrayToBuffer[65536];
+	cube CubeArr[16][16];
+	cube* ArrayToBuffer[256];
 	floatarray result;
 	unsigned int * CubeElement;
 	int elementsize=0;
