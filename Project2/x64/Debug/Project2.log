@@ -1,0 +1,42 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (press.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  block.cpp
+  bullet.cpp
+  enemybullet.cpp
+  enemyship.cpp
+  map.cpp
+  mybullet.cpp
+  oriship.cpp
+  press.cpp
+  Source.cpp
+  spaceship.cpp
+  Generating Code...
+/block.cpp(1,1): error C1083: Cannot open source file: '..\block.cpp': No such file or directory
+  (compiling source file '/block.cpp')
+  
+/bullet.cpp(1,1): error C1083: Cannot open source file: '..\bullet.cpp': No such file or directory
+  (compiling source file '/bullet.cpp')
+  
+/enemybullet.cpp(1,1): error C1083: Cannot open source file: '..\enemybullet.cpp': No such file or directory
+  (compiling source file '/enemybullet.cpp')
+  
+/enemyship.cpp(1,1): error C1083: Cannot open source file: '..\enemyship.cpp': No such file or directory
+  (compiling source file '/enemyship.cpp')
+  
+/map.cpp(1,1): error C1083: Cannot open source file: '..\map.cpp': No such file or directory
+  (compiling source file '/map.cpp')
+  
+/mybullet.cpp(1,1): error C1083: Cannot open source file: '..\mybullet.cpp': No such file or directory
+  (compiling source file '/mybullet.cpp')
+  
+/oriship.cpp(1,1): error C1083: Cannot open source file: '..\oriship.cpp': No such file or directory
+  (compiling source file '/oriship.cpp')
+  
+/press.cpp(1,1): error C1083: Cannot open source file: '..\press.cpp': No such file or directory
+  (compiling source file '/press.cpp')
+  
+/Source.cpp(1,1): error C1083: Cannot open source file: '..\Source.cpp': No such file or directory
+  (compiling source file '/Source.cpp')
+  
+/spaceship.cpp(1,1): error C1083: Cannot open source file: '..\spaceship.cpp': No such file or directory
+  (compiling source file '/spaceship.cpp')
+  

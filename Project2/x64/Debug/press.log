@@ -1,0 +1,5 @@
+﻿  press.cpp
+C:\Users\USER\Desktop\Project2\Project2\press.cpp(9,69): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  press.vcxproj -> C:\Users\USER\Desktop\Project2\Project2\x64\Debug\press.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
